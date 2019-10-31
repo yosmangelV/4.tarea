@@ -5,21 +5,36 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import {   AudioPage,
+           DescripcionPage,
+           LlamadasPage,
+           MensajePage,
+           TabsPage
+        } from '../pages/index.paginas';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    AudioPage,
+    DescripcionPage,
+    LlamadasPage,
+    MensajePage,
+    TabsPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp,{
+      backButtonText:'Atras'
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    AudioPage,
+    DescripcionPage,
+    LlamadasPage,
+    MensajePage,
+    TabsPage
   ],
   providers: [
     StatusBar,
